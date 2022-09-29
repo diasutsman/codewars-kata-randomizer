@@ -1,0 +1,23 @@
+{
+    "name": "Kata Randomizer (Codewars)",
+    "description": "Choose kata randomly from kata page in https://www.codewars.com/kata/",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {},
+    "permissions": ["storage", "activeTab", "scripting"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "img/codewars16.png",
+            "32": "img/codewars32.png",
+            "48": "img/codewars48.png",
+            "64": "img/codewars128.png"
+        }
+    },
+    "icons": {
+        "16": "img/codewars16.png",
+        "32": "img/codewars32.png",
+        "48": "img/codewars48.png",
+        "64": "img/codewars128.png"
+    }
+}
