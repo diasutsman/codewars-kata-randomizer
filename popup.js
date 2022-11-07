@@ -1,6 +1,5 @@
 const randomKata = document.getElementById('randomKata')
 const inputId = document.getElementById('inputId')
-const formCheckDate = document.getElementById('formCheckDate')
 const resultDate = document.getElementById('resultDate')
 const scrollSwitch = document.querySelector('.switch input[type="checkbox"]')
 const main = document.querySelector('.main')
@@ -38,16 +37,6 @@ scrollSwitch.addEventListener('click', async () => {
         function: loadAllKatas(),
         args: [scrollSwitch.checked]
     });
-})
-
-formCheckDate.addEventListener('submit', async (e) => {
-    e.preventDefault()
-    resultDate.innerText = 'loading...'
-    const kata = await fetch(`https://www.codewars.com/api/v1/code-challenges/${inputId.value}`)
-        .then(res => res.json())
-        .then(data => data)
-    const arr = new Date(kata.publishedAt).toDateString().split(' ').slice(1)
-    resultDate.innerText = `${arr[1]} ${arr[0]} ${arr[2]}`
 })
 
 function chooseKata() {
